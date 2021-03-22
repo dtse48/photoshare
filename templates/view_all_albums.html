@@ -1,0 +1,11 @@
+<title>All Albums</title>
+{% if albums %}
+    <h1>All albums:</h1>
+    {% for album in albums %}
+        <h1>Name: {{album[0]}}, Album id: {{album[1]}}, Owner id: {{album[2]}}</h1>
+    {% endfor %}
+{% endif %}
+{% if not albums %}
+    <h1>No albums exist!</h1>   
+{% endif %}
+<a href='/'>Home</a>

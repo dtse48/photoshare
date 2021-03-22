@@ -1,0 +1,15 @@
+<title>Create a New Album</title>
+<body>
+    <div class="title">
+        <h1>Please provide the following:</h1>
+    </div>
+    <div id="content">
+        <form method="post" action="{{ url_for('create_album') }}">
+            <label for="name">Enter album name</label>
+            <input type="name" name="name" /><br />
+            <label for="date">Today's date:</label>
+            <input type="date" name="date" /><br />
+            <input type="submit" />
+        </form>
+     </div>
+</body>

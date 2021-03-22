@@ -1,0 +1,16 @@
+<title>Albums</title>
+{% if albums %}
+    <h1>Here are your albums: {{albums}}</h1>
+{% endif %}
+<body>
+    <div class="title">
+        <h1>Want to view an album?</h1>
+    </div>
+    <div id="content">
+        <form method="post" action="{{ url_for('view_album') }}">
+            <label for="album_id">Enter album id</label>
+            <input type="name" name="album_id" /><br />
+            <input type="submit" />
+        </form>
+     </div>
+</body>

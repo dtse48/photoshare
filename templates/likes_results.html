@@ -1,0 +1,13 @@
+<title>View Comments</title>
+{%if photo %}
+    <h1>{{photo[2]}}</h1>
+    <h1>photo id: {{photo[1]}}<h1>
+    <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'/></li>
+    <h1>Likes: {{num_likes}}</h1>
+    <h1>Likers (by user_id):</h1>
+    {% for liker in likers %}
+        <li>{{liker[0]}}
+    {% endfor %}
+{% endif %}
+<br>
+<a href='/'>Home</a>

@@ -1,0 +1,9 @@
+<title>Top Users</title>
+<h1>Top Users:</h1>
+{% if top_users %}
+    {% for user in top_users %}
+        <body>User {{user[0]}} has a score of {{user[1]}}</body><br>
+    {% endfor %}
+{% endif %}
+<li><a href='/'>Home</a></li>
+    

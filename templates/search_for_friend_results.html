@@ -1,0 +1,13 @@
+<head>
+    <title>Search Results</title>
+</head>
+{%if no_matches_found%}
+    <h1>No matches were found</h1>
+    <a href='/findfriends'>Search again</a>
+{% endif %}
+{%if not no_matches_found%}
+    <h2>{{friend}} added as friend!</h2>
+{% endif %}
+
+
+<a href='/'>Home</a>

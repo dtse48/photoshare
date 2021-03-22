@@ -1,0 +1,17 @@
+
+{% if photos %}
+<h1>{{album_name}}</h1>
+    <ul>
+    {% for photo in photos %}
+
+        <li>{{photo[2]}}<br>
+        <li>photo id: {{photo[1]}}<br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0]).decode("ascii") }}'/></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% if not album_name %}
+<h1>Album is empty or does not exist</h1>
+{% endif %}
+<a href='/'>Home</a>

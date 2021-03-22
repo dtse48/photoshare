@@ -1,0 +1,14 @@
+<!doctype html>
+
+
+{% if tags %}
+	<h3>Here are your tags! Click a tag to see your photos with that tag!</h3>
+
+	<ul>
+		{% for tag in tags %}
+			<li><a href='/showPhoto/{{tag[0]}}/{{name}}'> {{ tag[0] }}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<h3>You don't have any tags. <a href="/upload"><u>Upload</u></a> a photo and add a tag! </h3>
+{% endif %}

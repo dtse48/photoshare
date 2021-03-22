@@ -1,0 +1,17 @@
+<head>
+    <title>Friends</title>
+</head>
+    <body>
+        <div class="title">
+            {% if friends %}
+                <h1>Here are your current friends:</h1>
+                <h2>{{ friends }}</h2>
+            {% endif %}
+        </div>
+        <div add_friends = "content">
+            <h1>Want more friends?</h1>
+            <a href='/findfriends'>Search for a new friend here</a>
+        </div>
+
+    </body>
+<a href='/'>Home</a>

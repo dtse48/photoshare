@@ -1,0 +1,10 @@
+<!doctype html>
+
+<h1>Images with tag {{ tag }}</h1>
+
+{% for photo in photoTag %}
+	<img src='data:image/jpg;base64, {{ base64.b64encode(photo[1]).decode("ascii") }}'/>
+	<p>this is photo id {{ photo[0] }}</p>
+	<p>this is tag {{ photo[2] }}</p>
+{% endfor %}
+<li><a href='/'>Home</a></li>

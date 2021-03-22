@@ -1,0 +1,20 @@
+<!doctype html>
+
+{% if photos %}
+	<h2>Here are your recommended photos based on your tags: </h2>
+    <ul>
+    {% for photo in photos %}
+
+        <li><br>
+        <img src='data:image/jpg;base64, {{ base64.b64encode(photo[0][1]).decode("ascii") }}'/></li>
+
+    {% endfor %}
+    </ul>
+
+{% else %}
+	<h2>No photos have your tags. <a href="/upload"><u>Add</u></a> more photos with more tags!</h2>
+{% endif %}
+
+
+
+

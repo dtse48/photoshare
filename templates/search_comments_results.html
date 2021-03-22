@@ -1,0 +1,13 @@
+<title>Comment Search Results</title>
+<h1>"{{comment}}"</h1>
+<br>
+{% if not final_list %}
+    <h1>No registered users have made this comment</h1>
+{% endif %}
+{% if final_list %}
+    {% for entry in final_list %}
+        <body>User {{entry[0]}} made this comment {{entry[1]}} time(s)!</body> <br>
+    {% endfor %}
+{% endif %}
+
+<li><a href='/'>Home</a></li>

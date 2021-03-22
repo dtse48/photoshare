@@ -1,0 +1,6 @@
+<title>Friend Recommendations</title>
+<h1>Friend Recommendations</h1>
+{% for friend in recs %}
+    <body>You have {{friend[1]}} mutual friend(s) with user {{friend[0]}}</body><br>
+{% endfor %}
+<li><a href='/'>Home</a></li>

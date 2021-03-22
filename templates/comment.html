@@ -1,0 +1,17 @@
+<title>Leave a comment</title>
+<body>
+    <div class="title">
+        <h1>Please provide the following:</h1>
+    </div>
+    <div id="content">
+        <form method="post" action="{{ url_for('submit_comment') }}">
+            <label for="photo_id">Photo id:</label>
+            <input type="name" name="photo_id" /><br />
+            <label for="comment">Comment (max 100 characters):</label>
+            <input type="text" name="comment" maxlength = "100"/><br />
+            <label for="date">Today's date:</label>
+            <input type="date" name="date"/><br />
+            <input type="submit" />
+        </form>
+     </div>
+</body>
